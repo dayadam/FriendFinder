@@ -26,14 +26,27 @@ $(document).ready(function () {
     };
 
     for (i = 0; i < questionNumbers.length; i++) {
+        //console.log($('[name="question-' + questionNumbers[i] + '"]'));
         for (j = 1; j <= 5; j++) {
 
         }
     }
 
     $(".submit-button").click(function() {
-        submitAnswers();
+        //submitAnswers();
         //const answer = $(".form")
+/*          for (i = 0; i < questionNumbers.length; i++) {
+            const question = $('[name="question-' + questionNumbers[i] + '"]');
+            for (j = 0; j < question.length; j++) {
+                //if (question[j].is(":checked")) {
+                    console.log(question[j]);
+                //}
+            }
+        } */
+        console.log($("input:checked"))
+        const answers = $('input:checked');
+        for (let i = 0; )
+
     });
 
 
