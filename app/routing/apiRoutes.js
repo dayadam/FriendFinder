@@ -6,12 +6,9 @@ module.exports = function (app) {
 
     app.post("/api/friends", function (req, res) {
         const newFriend = req.body;
-        //console.log(newFriend); 
-        const closestFriend = {name: friendFinder(newFriend, friendsData)};
-        console.log(closestFriend);
+        const closestFriend = friendFinder(newFriend, friendsData);
         friendsData.push(newFriend);
         res.json(closestFriend);
-        //console.log(friendsData);
     });
 
     app.get("/api/friends", function (req, res) {

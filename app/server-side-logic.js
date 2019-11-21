@@ -18,7 +18,6 @@ function createNewFriendScoresArray(newFriend) {
 function createExistingFriendsScoresArrays(friendsData, newFriendScoresArray) {
     const existingFriendsScoresArrays = [];
     friendsData.forEach(function (index) {
-        console.log(index);
         let totalDifference = 0;
         for (i=0; i< index.scores.length; i++) {
             totalDifference += Math.abs(parseInt(index.scores[i]) - newFriendScoresArray[i]);
@@ -26,5 +25,8 @@ function createExistingFriendsScoresArrays(friendsData, newFriendScoresArray) {
         existingFriendsScoresArrays.push(totalDifference);
     });
     const indexOfLowestDifference = existingFriendsScoresArrays.indexOf(Array.min(existingFriendsScoresArrays));
-    return friendsData[indexOfLowestDifference].name;
+    return {
+        name: friendsData[indexOfLowestDifference].name,
+        photo: friendsData[indexOfLowestDifference].photo
+    };
 };

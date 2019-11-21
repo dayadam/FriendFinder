@@ -21,12 +21,9 @@ $(document).ready(function () {
             type: "POST",
             data: newFriend //why does JSONstringify kill this?
         }).then(function (response) {
-            var result = confirm(`Your closest match is: ${response.name}`);
-            if (result) {
-                location.reload();
-            } else {
-                location.reload();
-            }
+            $("#match-name").text(response.name);
+            $("#match-img").attr("src", response.photo);
+            $("#results-modal").modal("toggle");
         });
     };
 
