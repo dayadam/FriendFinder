@@ -12,7 +12,7 @@ $(document).ready(function () {
     function CreateFriendObj(name, photo, scoresArray) {
         this.name = name;
         this.photo = photo;
-        this.scoresArray = scoresArray;
+        this.scores = scoresArray;
     };
 
     function postNewFriend(newFriend) {

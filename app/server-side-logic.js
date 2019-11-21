@@ -9,7 +9,7 @@ module.exports = function (newFriend, friendsData) {
 };
 
 function createNewFriendScoresArray(newFriend) {
-    const newFriendScoresArray = newFriend.scoresArray.map(function (index) {
+    const newFriendScoresArray = newFriend.scores.map(function (index) {
         return parseInt(index);
     });
     return newFriendScoresArray;
@@ -18,6 +18,7 @@ function createNewFriendScoresArray(newFriend) {
 function createExistingFriendsScoresArrays(friendsData, newFriendScoresArray) {
     const existingFriendsScoresArrays = [];
     friendsData.forEach(function (index) {
+        console.log(index);
         let totalDifference = 0;
         for (i=0; i< index.scores.length; i++) {
             totalDifference += Math.abs(parseInt(index.scores[i]) - newFriendScoresArray[i]);
