@@ -10,25 +10,30 @@ $(document).ready(function () {
     };
 
     function CreateFriendObj(name, photo, scoresArray) {
-        this.name= name;
-        this.photo= photo;
-        this.scoresArray= scoresArray;
+        this.name = name;
+        this.photo = photo;
+        this.scoresArray = scoresArray;
     };
 
-    function postNewFriend(newFriend){
+    function postNewFriend(newFriend) {
         $.ajax({
             url: "/api/friends",
             type: "POST",
             data: newFriend //why does JSONstringify kill this?
-        }).then(function(response){
-            console.log(response);
+        }).then(function (response) {
+            var result = confirm(`Your closest match is: ${response.name}`);
+            if (result) {
+                location.reload();
+            } else {
+                location.reload();
+            }
         });
     };
 
     $(".submit-button").click(function () {
         const name = $("#user-name").val();
-        const photo= $("#user-img").val();
-        const scoresArray= createScoresArray($('input:checked'));
+        const photo = $("#user-img").val();
+        const scoresArray = createScoresArray($('input:checked'));
         const newFriend = new CreateFriendObj(name, photo, scoresArray);
         postNewFriend(newFriend);
     });
