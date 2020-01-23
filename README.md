@@ -12,7 +12,7 @@ This application quizzes users on their temperaments and matches them to the per
 
 ## Organization of the Application
 
-The application uses Bootstrap for the user interface. Immediately upon launch, the application uses axios and cheerio to scrape the headlines, hyperlinks, and snippets (if available) from [Hypepotamus](https://hypepotamus.com/). The application then checks each of these against the database to see if they have been previously saved, and if so, display the previously saved version with any available comments. If the article has not been previously saved, the application will display the new article to the user. Views are server-side rendered with the help of handlebars. Express handles routing and mongoose models the data as an ODM for MongoDB. 
+The application uses Bootstrap for the user interface. The application has an existing JavaScript file with an array of existing friends, including an array of their scores. The application will intake the data from the user and turn their scores into an array and send this to the server with an AJAX request. The application then takes the user's input scores and parses them. Then application then creates a new array of arrays of comparisons between the existing friends' scores and the user's inputted scores. From this new array, the application sends the most similar friend to the client side and displays it to the user. The program saves the user's inputs into the existing friend data. Express handles routing in the node backend. jQuery handles DOM manipulation. 
 
 ## Getting Started
 
