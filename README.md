@@ -22,7 +22,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Node.js, MongoDB, and express, cheerio, axios, mongoose, and express-handlebars packages are required to run this application locally.  
+Node.js and express packages are required to run this application locally.  
 
 ### Clone
 
@@ -50,13 +50,8 @@ Users can enter their name and comment in those respective fields on an article 
 
 * [Node.js](https://nodejs.org/en/) - Server runtime environment for JavaScript
 * [Express.js](https://www.npmjs.com/package/express) - Fast, unopinionated, minimalist web framework for node.
-* [Mongoose](https://www.npmjs.com/package/mongoose) - MongoDB object modeling tool designed to work in an asynchronous environment
 * [jQuery](https://jquery.com/) - Fast, small, and feature-rich JavaScript library
 * [Bootstrap](https://getbootstrap.com/) - CSS framework directed at responsive, mobile-first front-end web development
-* [MongoDB](https://www.mongodb.com/download-center/community) - General purpose, document-based, distributed database
-* [Axios](https://www.npmjs.com/package/axios) - Package used for server side http requests to APIs
-* [Express Handlebars](https://www.npmjs.com/package/express-handlebars) - A Handlebars view engine for Express
-* [Cheerio](https://www.npmjs.com/package/cheerio) - Fast, flexible & lean implementation of core jQuery designed specifically for the server.
 
 ## Authors
 
