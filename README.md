@@ -44,7 +44,7 @@ $ npm install
 
 ## Usage
 
-Users can enter their name and comment in those respective fields on an article and click the "Submit" button to save it to the database and display it. Clicking the "Delete" button besides an existing comment will remove it from the database and remove it from the user interface. The article headlines are hyperlinks to the Hypepotamus article itself.  
+At the home screen, users can click the "Start survey" button to start the survey. Users can then fill out all the input fields and click the "Submit" button to enter their results. A modal will then pop up displaying the users' most similar friend match.
 
 ## Built With
 
