@@ -1,6 +1,6 @@
 # FriendFinder
 
-This is a full stack application that scrapes article headlines and snippets from [Hypepotamus](https://hypepotamus.com/) and allows users to save and delete comments on the articles. 
+This application quizzes users on their temperaments and matches them to the person from in-memory storage with the most similar answers based on their inputs.
 ---
 
 ## Table of Contents
